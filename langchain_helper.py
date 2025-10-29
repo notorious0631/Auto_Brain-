@@ -1,4 +1,4 @@
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_community.embeddings import HuggingFaceBgeEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import CSVLoader
 from langchain_classic.prompts import PromptTemplate
@@ -11,9 +11,9 @@ google_api_key="AIzaSyB0wT4y1JV7dq-ZErTydtq25arO0oA1ASE",
     temperature=0.1
 )
 
-embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
+embeddings = HuggingFaceBgeEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
-instructor_embeddings = HuggingFaceEmbeddings()
+instructor_embeddings = HuggingFaceBgeEmbeddings()
 vectordb_file_path="faiss_index"
 
 def create_vector_db():
