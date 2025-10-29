@@ -3,11 +3,8 @@ from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import CSVLoader
 from langchain_classic.prompts import PromptTemplate
 from langchain_classic.chains import RetrievalQA
-from sklearn.externals.array_api_compat.dask.array.linalg import vector_norm
-
 from langchain_google_genai import ChatGoogleGenerativeAI
-from google import genai
-from google.genai import types
+
 llm = ChatGoogleGenerativeAI(
 google_api_key="AIzaSyB0wT4y1JV7dq-ZErTydtq25arO0oA1ASE",
     model="gemini-2.5-flash",
