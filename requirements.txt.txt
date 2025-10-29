@@ -1,13 +1,11 @@
-langchain-google-genai>=1.0.3
-huggingface-hub>=0.25.0
+huggingface-hub
 sentence-transformers>=3.0.0
 faiss-cpu>=1.8.0
 pandas>=2.2.0
 scikit-learn>=1.5.0
-Langchain
+langchain
 langchain-core==0.3.12
 langchain-community==0.3.3
-langchain==0.3.4
 python-dotenv
 langchain-openai
 nemoguardrails

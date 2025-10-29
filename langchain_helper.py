@@ -38,7 +38,7 @@ def get_qa_chain():
 
         QUESTION: {question}"""
 
-    PROMPT = PromptTemplate(
+    prompt = PromptTemplate(
         template=prompt_template, input_variables=["context", "question"]
     )
 
@@ -47,7 +47,7 @@ def get_qa_chain():
                                         retriever=retriever,
                                         input_key="query",
                                         return_source_documents=True,
-                                        chain_type_kwargs={"prompt": PROMPT})
+                                        chain_type_kwargs={"prompt":prompt})
 
     return chain
 
