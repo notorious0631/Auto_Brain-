@@ -1,0 +1,8 @@
+# a path:
+/templates/index.html
+  # headers for that path:
+  X-Frame-Options: DENY
+# another path:
+/templates/index2.html
+  # headers for that path:
+  X-Frame-Options: SAMEORIGIN
