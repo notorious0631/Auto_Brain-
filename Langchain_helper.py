@@ -20,7 +20,7 @@ instructor_embeddings = HuggingFaceEmbeddings()
 vectordb_file_path="faiss_index"
 
 def create_vector_db():
-    loader = CSVLoader(file_path="D:\LLm\codebasics_faqs.csv", source_column="prompt")
+    loader = CSVLoader(file_path="codebasics_faqs.csv", source_column="prompt")
     docs = loader.load()
     vectordb = FAISS.from_documents(documents=docs, embedding=instructor_embeddings)
     vectordb.save_local(vectordb_file_path)
@@ -31,8 +31,6 @@ def get_qa_chain():
         instructor_embeddings,
         allow_dangerous_deserialization=True
     )
-
-    # Create a retriever for querying the vector database
     retriever = vectordb.as_retriever(score_threshold=0.7)
 
     prompt_template = """Given the following context and a question, generate an answer based on this context only.

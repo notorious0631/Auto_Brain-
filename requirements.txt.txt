@@ -1,0 +1,12 @@
+streamlit
+langchain
+langchain-core
+langchain-community
+langchain-classic
+langchain-huggingface
+langchain-google-genai
+faiss-cpu
+sentence-transformers
+scikit-learn
+google-generativeai
+python-dotenv
