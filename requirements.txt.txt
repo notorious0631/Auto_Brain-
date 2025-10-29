@@ -3,7 +3,7 @@ langchain
 langchain-core
 langchain-community
 langchain-classic
-langchain-huggingface
+git+https://github.com/langchain-ai/langchain-huggingface.git
 langchain-google-genai
 faiss-cpu
 sentence-transformers
