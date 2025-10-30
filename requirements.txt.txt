@@ -1,6 +1,8 @@
 streamlit
 huggingface-hub
+transformers
 sentence-transformers
+chromadb
 faiss-cpu
 pandas
 scikit-learn
