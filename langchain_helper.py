@@ -8,7 +8,7 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 llm = ChatGoogleGenerativeAI(
 google_api_key="AIzaSyB0wT4y1JV7dq-ZErTydtq25arO0oA1ASE",
     model="gemini-2.5-flash",
-    temperature=0.1
+    temperature=0.7
 )
 
 embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
@@ -54,5 +54,5 @@ def get_qa_chain():
 
 if __name__ == "__main__":
     create_vector_db()
-    chain = get_qa_chain()
-    print(chain.invoke("Do you guys provide internship and also do you offer EMI payments?"))
+    qa_chain = get_qa_chain()
+    print(qa_chain.invoke("Do you guys provide internship and also do you offer EMI payments?"))

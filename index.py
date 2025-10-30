@@ -12,7 +12,7 @@ if btn:
 question = st.text_input("What is your question?")
 if question:
     chain = get_qa_chain()
-    response = chain(question)
+    response = chain.invoke(question)
 
     st.header("Answer:")
     st.write(response["result"])
