@@ -1,4 +1,4 @@
-🧠 ChatGPT FAQ Assistant (Gemini + LangChain)
+🧠 AutoBrain FAQ Assistant (Gemini + LangChain)
 📌 Overview
 
 This project is an AI-powered FAQ chatbot built using LangChain, Google Gemini (Generative AI), and FAISS for semantic search.
