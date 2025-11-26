@@ -12,3 +12,6 @@ pandas
 numpy
 tqdm
 torch
+fastapi
+uvicorn
+python-multipart

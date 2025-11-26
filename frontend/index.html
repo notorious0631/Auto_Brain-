@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoBrain 🧠</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>AutoBrain 🧠</h1>
+            <p>Your AI Knowledge Assistant</p>
+        </header>
+
+        <main>
+            <section class="control-panel">
+                <div class="file-upload-container">
+                    <label for="csv-file" class="file-label">Upload CSV File</label>
+                    <input type="file" id="csv-file" accept=".csv" />
+                </div>
+                <button id="create-knowledge-btn" class="primary-btn">
+                    <span class="btn-text">Create Knowledge Base</span>
+                    <span class="loader hidden"></span>
+                </button>
+                <p id="status-msg" class="status-msg"></p>
+            </section>
+
+            <section class="chat-interface">
+                <div id="chat-history" class="chat-history">
+                    <div class="message bot-message">
+                        Hello! I am AutoBrain. Upload your FAQ CSV file, create the knowledge base, and then ask me
+                        anything!
+                    </div>
+                </div>
+                <div class="input-area">
+                    <input type="text" id="question-input" placeholder="Ask a question..." disabled>
+                    <button id="send-btn" disabled>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="send-icon">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+                        </svg>
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

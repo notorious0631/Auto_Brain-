@@ -6,7 +6,7 @@ from langchain_classic.chains import RetrievalQA
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 llm = ChatGoogleGenerativeAI(
-google_api_key="AIzaSyB0wT4y1JV7dq-ZErTydtq25arO0oA1ASE",
+    google_api_key="AIzaSyB0wT4y1JV7dq-ZErTydtq25arO0oA1ASE",
     model="gemini-2.5-flash",
     temperature=0.7
 )
@@ -16,8 +16,8 @@ embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-
 instructor_embeddings = HuggingFaceEmbeddings()
 vectordb_file_path="faiss_index"
 
-def create_vector_db():
-    loader = CSVLoader(file_path="codebasics_faqs.csv", source_column="prompt")
+def create_vector_db(file_path="codebasics_faqs.csv"):
+    loader = CSVLoader(file_path=file_path, source_column="prompt")
     docs = loader.load()
     vectordb = FAISS.from_documents(documents=docs, embedding=instructor_embeddings)
     vectordb.save_local(vectordb_file_path)
